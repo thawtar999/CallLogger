@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32257A02-23C0-4FCF-9E8D-B289A3B3E987}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleCallLogger</RootNamespace>
+    <AssemblyName>SimpleCallLogger</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewCustomerForm.Designer.cs">
+      <DependentUpon>AddNewCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewStaffForm.Designer.cs">
+      <DependentUpon>AddNewStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CrystalReportByCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportByCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetReport.cs">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetReport2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetReport3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogCallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogCallForm.Designer.cs">
+      <DependentUpon>LogCallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportByCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportByCustomer.Designer.cs">
+      <DependentUpon>ReportByCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportByDate.Designer.cs">
+      <DependentUpon>ReportByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportByDuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportByDuration.Designer.cs">
+      <DependentUpon>ReportByDuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportByStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportByStaff.Designer.cs">
+      <DependentUpon>ReportByStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CrystalReportByDateRange.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportByDateRange.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReportByDuration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportByDuration.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReportByStaff.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportByStaff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomerForm.Designer.cs">
+      <DependentUpon>UpdateCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStaffForm.Designer.cs">
+      <DependentUpon>UpdateStaffForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewCustomerForm.resx">
+      <DependentUpon>AddNewCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewStaffForm.resx">
+      <DependentUpon>AddNewStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReportByCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportByCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogCallForm.resx">
+      <DependentUpon>LogCallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReportByCustomer.resx">
+      <DependentUpon>ReportByCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportByDate.resx">
+      <DependentUpon>ReportByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportByDuration.resx">
+      <DependentUpon>ReportByDuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportByStaff.resx">
+      <DependentUpon>ReportByStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReportByDateRange.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportByDateRange.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReportByDuration.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportByDuration.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReportByStaff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportByStaff.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomerForm.resx">
+      <DependentUpon>UpdateCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStaffForm.resx">
+      <DependentUpon>UpdateStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetReport.xsc">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetReport.xss">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport2.xsc">
+      <DependentUpon>DataSetReport2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetReport2.xss">
+      <DependentUpon>DataSetReport2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport3.xsc">
+      <DependentUpon>DataSetReport3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetReport3.xss">
+      <DependentUpon>DataSetReport3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
